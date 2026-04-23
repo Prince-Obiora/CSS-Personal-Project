@@ -304,7 +304,7 @@ span.icons {
     width: 20%;
     height: 2px;
     margin: 1rem;
-    }
+}
 
 #contact form {
     display: flex;
@@ -344,7 +344,7 @@ input {
 #contact h6 {
     font-size: 1.25rem;
     text-align: center;
-    }
+}
 
 .contact-grids {
     display: grid;
@@ -405,9 +405,29 @@ footer p {
 
 /*MEDIA QUERIES*/
 @media (min-width: 320px) {
+
+    header, #home, #skills, #contact, footer {
+        width: 100vw;
+    }
+
+    .cover-image {
+
+            /* Background image path */
+    background-repeat: no-repeat;
+    /* Don't repeat the image */
+    background-size: cover;
+       height: auto;
+    }
+
+
+
     .cover-image-desktop {
         display: none;
     }
+
+#home {
+    width: 100vw;
+}
 
     .about-para {
         display: grid;
@@ -433,18 +453,18 @@ footer p {
     }
 
 
-        #contact form {
-            text-align: center;
-            width: 300px;
-        }
+    #contact form {
+        text-align: center;
+        width: 300px;
+    }
 
-        input {
-            text-align: center;
-        }
+    input {
+        text-align: center;
+    }
 
-        #contact textarea {
-            text-align: center;
-        }
+    #contact textarea {
+        text-align: center;
+    }
 
     .contact-grids {
         display: grid;
@@ -456,9 +476,9 @@ footer p {
 
 
 
-.social {
-    text-align: center;
-}
+    .social {
+        text-align: center;
+    }
 
 }
 
@@ -608,12 +628,15 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
-.contact-form{
-padding-bottom: 3rem;
-}
 
-.skill-line, .line, .contact-line {
-    width: 7%;
-}
+    .contact-form {
+        padding-bottom: 3rem;
+    }
+
+    .skill-line,
+    .line,
+    .contact-line {
+        width: 7%;
+    }
 
 }
