@@ -404,7 +404,7 @@ footer p {
 
 
 /*MEDIA QUERIES*/
-@media (min-width: 250px) {
+@media (min-width: 320px) {
     .cover-image-desktop {
         display: none;
     }
@@ -464,7 +464,7 @@ footer p {
 
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
 
     .mobile {
         display: none;
