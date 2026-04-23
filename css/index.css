@@ -256,7 +256,7 @@ span.icons {
 }
 
 #project img {
-    width: 18rem;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -406,17 +406,21 @@ footer p {
 /*MEDIA QUERIES*/
 @media (min-width: 320px) {
 
-    header, #home, #skills, #contact, footer {
+    header,
+    #home,
+    #skills,
+    #contact,
+    footer {
         width: 100vw;
     }
 
     .cover-image {
-
-            /* Background image path */
-    background-repeat: no-repeat;
-    /* Don't repeat the image */
-    background-size: cover;
-       height: auto;
+        /* Background image path */
+        background-repeat: no-repeat;
+        /* Don't repeat the image */
+        background-size: auto;
+        height: auto;
+        width: 100px;
     }
 
 
@@ -425,9 +429,9 @@ footer p {
         display: none;
     }
 
-#home {
-    width: 100vw;
-}
+    #home {
+        width: 100vw;
+    }
 
     .about-para {
         display: grid;
@@ -446,12 +450,25 @@ footer p {
 
     .project-grids {
         display: grid;
+        align-items: center;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 2rem;
-        padding: 1rem 2rem;
+        padding: 1rem;
     }
 
+    .project-cards {
+        width: 300px;
+        }
+
+    .project-grids img {
+        width: 100%;
+        display: block;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 0.6rem;
+        
+    }
 
     #contact form {
         text-align: center;
