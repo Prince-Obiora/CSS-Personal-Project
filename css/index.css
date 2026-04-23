@@ -608,6 +608,9 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
+.contact-form{
+padding-bottom: 3rem;
+}
 
 .skill-line, .line, .contact-line {
     width: 7%;
