@@ -82,7 +82,7 @@ header nav a {
     gap: 10px;
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -259,7 +259,6 @@ span.icons {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
 }
 
@@ -295,7 +294,7 @@ span.icons {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .contact-line {
@@ -317,7 +316,6 @@ span.icons {
     border-radius: 10px;
     outline: none;
     justify-content: center;
-    height: rem;
 
 }
 
@@ -358,7 +356,10 @@ input {
 }
 
 div .message textarea {
-    width: 100%;
+    min-width: 100%;
+    min-height: max-content;
+    max-width: 100%;
+    max-height: max-content;
     border-radius: 10px;
     font-size: 0.7rem;
     padding: 0.4rem 0.8rem;
@@ -451,6 +452,113 @@ footer p {
     .project-grids {
         display: grid;
         align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .project-cards {
+        width: 300px;
+    }
+
+    .project-grids img {
+        width: 100%;
+        display: block;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 0.6rem;
+
+    }
+
+    
+    #contact form {
+        text-align: center;
+        width: 300px;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    #contact textarea {
+        text-align: center;
+    }
+
+    .contact-grids {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 0 0rem;
+        gap: 2rem
+    }
+
+
+    .social {
+        text-align: center;
+    }
+
+    footer {
+        bottom: 0;
+        height: 67px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    header,
+    #home,
+    #about,
+    #skills,
+    #contact,
+    footer {
+        width: 100%;
+    }
+
+    .cover-image {
+        /* Background image path */
+        background-repeat: no-repeat;
+        /* Don't repeat the image */
+        background-size: 1000px;
+        height: auto;
+        width: 100px;
+
+    }
+
+
+
+    .cover-image-desktop {
+        display: none;
+    }
+
+    /* .home-grid {
+        
+    } */
+#about {
+    padding: 2rem;
+}
+    .about-para {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+
+    .skills-grid {
+        display: grid;
+
+        .project-grids {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+
+    .project-grids {
+        display: grid;
+        align-items: center;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 2rem;
@@ -459,7 +567,7 @@ footer p {
 
     .project-cards {
         width: 300px;
-        }
+    }
 
     .project-grids img {
         width: 100%;
@@ -467,16 +575,13 @@ footer p {
         height: auto;
         overflow: hidden;
         margin-bottom: 0.6rem;
-        
+
     }
 
-    #contact {
-height: 70vh
-    }
-
+    
     #contact form {
         text-align: center;
-        width: 300px;
+        width: 600px;
     }
 
     input {
@@ -503,162 +608,7 @@ height: 70vh
 
 }
 
-@media (min-width: 768px) {
 
-    .mobile {
-        display: none;
-    }
-
-    header {
-        position: sticky;
-    }
-
-    header nav {
-        width: 100%;
-        /* Navigation takes 80% of header width */
-        /* max-width: 80rem; Maximum width of 1280px */
-        margin: 0 auto;
-        /* Center navigation (0 top/bottom, auto left/right) */
-        top: 0;
-        /* position: sticky; */
-        z-index: 500;
-    }
-
-    header .desktop {
-        display: flex;
-        /* Use flexbox for horizontal menu */
-        gap: 2rem;
-        /* 32px space between menu items */
-        flex-direction: row;
-        position: relative;
-        border: none;
-        background-color: transparent;
-        top: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-
-    header .desktop a {
-        color: rgb(255, 255, 255);
-        transition: all 0.4s ease-in-out;
-    }
-
-    header .desktop a:hover {
-        background-color: rgba(244, 118, 0, 0.7);
-        padding: 0.52rem;
-        border-radius: 5px;
-
-    }
-
-    #home {
-        align-items: flex-start;
-        text-align: left;
-        gap: 0rem;
-
-    }
-
-    #home a {
-        align-self: flex-start;
-        margin-left: 3rem;
-        position: relative;
-        margin-bottom: 2rem;
-    }
-
-    .home-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
-        align-items: center;
-        text-align: left;
-        gap: 0px;
-
-    }
-
-    #home h1 {
-        font-size: 3rem;
-        padding: 2rem 3rem;
-        line-height: 3.5rem;
-    }
-
-    #home h2 {
-        font-size: 0 1rem;
-        padding: 0 3rem;
-    }
-
-
-
-    .about-para {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: auto;
-    }
-
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: 40px;
-    }
-
-    #skills h4 {
-        font-size: 1.2rem;
-    }
-
-    .project-grids {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: 20px;
-        padding: 1rem 2rem;
-    }
-
-    .project-grids div:nth-child(3) {
-        grid-column: 1/3;
-        justify-self: center;
-
-    }
-
-    #project p {
-        font-weight: bold;
-    }
-
-    #project img {
-        padding: 0.5rem 0rem;
-        width: 25rem;
-        border-radius: 22px;
-    }
-
-    .project-cards {
-        background-color: #323232;
-        border-radius: 20px;
-        padding: 1rem;
-        text-align: center;
-        transition: all 0.5s ease-out;
-        cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        width: 30rem;
-        height: 16rem;
-        color: #f6f6f6;
-    }
-
-    .contact-grids {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .contact-form {
-        padding-bottom: 3rem;
-    }
-
-    .skill-line,
-    .line,
-    .contact-line {
-        width: 7%;
-    }
-
-}
 
 @media (min-width: 1024px) {
 
@@ -781,8 +731,8 @@ height: 70vh
     }
 
     #project img {
-        padding: 0.5rem 0rem;
-        width: 25rem;
+        padding: 0.5rem;
+        width: 100%;
         border-radius: 22px;
     }
 
