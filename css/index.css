@@ -445,6 +445,7 @@ div .message textarea {
 .bold-social {
     font-size: 1.2rem;
     font-weight: 670;
+    color: #F67D31;
 }
 
 /* Social section */
@@ -820,13 +821,21 @@ font-size: 1.2rem;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
     }
+#skills {
+    padding: 2rem;
+}
+
 
     .skills-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
-        gap: 40px;
-    }
+        gap: 20px;
+        }
+
+.skills-grid div{
+    width: 530px;
+}
 
     #skills h4 {
         font-size: 1.2rem;
@@ -865,10 +874,29 @@ font-size: 1.2rem;
         cursor: pointer;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         width: 30rem;
-        height: 16rem;
+        height: auto;
         color: #f6f6f6;
     }
 
+    .overlay {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    transition: all 0.5s ease;
+}
+
+.project-cards:hover .overlay {
+    max-height: 200px; /* adjust depending on text length */
+    opacity: 1;
+    margin-top: 10px;
+}
+
+    #contact {
+        min-height: 100vh;
+    }
     .contact-grids {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
